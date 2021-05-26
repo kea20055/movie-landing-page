@@ -1,0 +1,307 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'poppins', sans-serif;
+}
+:root{
+	--fondo: #2B2B2B;
+	--color_principal: #FBBA2E;
+	--color_elements: #605F5F;
+	--sombra: 0 3px #FBBA2E;
+	--circulo: 50%;
+	--border-redondo: 10px;
+	--borde: 10px 10px #Fff;
+	--cursor: pointer;
+}
+.first_section{
+	width: 100%;
+	height: 100vh;
+}
+.image{
+	width: 40px;
+	height: 40px;
+	object-fit: cover;
+	border-radius: var(--circulo);
+	border: 2.5px solid var(--color_principal);
+}
+header{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 35px;
+	background: var(--fondo);
+	color: #fff;
+}
+.icon-title{
+	color: var(--color_principal);
+	margin-right: 5px;
+}
+.slide{
+	width: 150px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.uno, .dos{
+	width: 40px;
+	height: 40px;
+	background: var(--color_elements);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--circulo);
+	cursor: pointer;
+}
+.tres{
+	width: 40px;
+	height: 40px;
+	background: var(--color_elements);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: var(--circulo);
+	border: var(--borde);
+}
+.ul{
+	display: flex;
+	list-style: none;
+	margin-top: 10px;
+}
+.a{
+	text-decoration: none;
+	margin-left: 50px;
+	color: #fff;
+}
+.a:hover{
+	text-decoration: underline;
+}
+.a:nth-child(2){
+	background: var(--color_principal);
+	display: flex;
+	align-items: center;
+	position: relative;
+	bottom: 5px;
+	padding: 5px 10px;
+	border-radius: var(--border-redondo);
+}
+/*------------------------------header terminado----------------------------*/
+
+.sections{
+	width: 100%;
+	background: var(--fondo);
+	padding: 20px 40px;
+}
+.ul-1{
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	list-style: none;
+	font-size: 1.5em;
+}
+.primer{
+	width: 100px;
+	text-align: center;
+	box-shadow: var(--sombra);
+}
+.a-1{
+	text-decoration: none;
+	color: #fff;
+	font-weight: 700;
+	opacity: .4;
+	transition: 0.3s;
+}
+.a-1:hover{
+	opacity: 1;
+	font-weight: 500;
+}
+.a-1-2{
+	color: #fff;
+	text-decoration: none;
+}
+/*------------------------Segunda seccion terminada---------------------------------*/
+
+.container-images{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 40px 0 10px 0;
+	background: var(--fondo);
+}
+.cont-image{
+	display: flex;
+	width: 200px;
+	height: 300px;
+	background: url(imagenes/IT.jpg);
+	background-position: center;
+	background-size: cover;
+	margin-right: 20px;
+	border-radius: 5px;
+
+}
+
+.cont-image-1{
+	width: 200px;
+	height: 300px;
+	background: url(imagenes/soul.jpg);
+	background-position: center;
+	background-size: cover;
+	margin-right: 20px;
+	border-radius: 5px;
+
+}
+.cont-image-2{
+	width: 200px;
+	height: 350px;
+	background: url(imagenes/endgame.jpg);
+	background-position: center;
+	background-size: cover;
+	margin-right: 20px;
+	border-radius: 5px;
+	position: relative;
+	bottom: 25px;
+}
+.cont-image-2::before{
+	content: '▶';
+	width: 40px;
+	height: 40px;
+	color: #fff;
+	background: var(--color_principal);
+	position: absolute;
+	border-radius: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 320px;
+	left: calc(35% + 5px);
+	border: 5px solid var(--fondo);
+	cursor: pointer;
+}
+.cont-image-3{
+	width: 200px;
+	height: 300px;
+	background: url(imagenes/wick.jpg);
+	background-position: center;
+	background-size: cover;
+	margin-right: 20px;
+	border-radius: 5px;
+
+}
+.cont-image-4{
+	width: 200px;
+	height: 300px;
+	background: url(imagenes/spiderman.jpg);
+	background-position: center;
+	background-size: cover;
+	margin-right: 20px;
+	border-radius: 5px;
+
+}
+.bg{
+	width: 0;
+	height: 100%;
+	background: rgba(0,0,0,0.7);
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.5s;
+	cursor: pointer;
+}
+.title-image{
+	font-weight: 400;
+	visibility: hidden;
+	white-space: nowrap;
+}
+.cont-image:hover .bg, .cont-image-1:hover .bg, .cont-image-2:hover .bg, .cont-image-3:hover .bg, .cont-image-4:hover .bg{
+	width: 100%;
+	visibility: visible;
+}
+.cont-image:hover .title-image, .cont-image-1:hover .title-image, .cont-image-3:hover .title-image, .cont-image-4:hover .title-image{
+	visibility: visible;
+	overflow: hidden;
+}
+ .cont-image-2:hover .title-image{
+ 	visibility: visible;
+ 	overflow: hidden;
+ 	width: 60%;
+ 	white-space: normal;
+ }
+ /*-----------------------------------seccion de imagenes terminada----------------------------------------*/
+
+ footer{
+ 	width: 100%;
+ 	background: var(--fondo); 
+ }
+ .title-footer{
+ 	display: flex;
+ 	justify-content: center;
+ 	color: #fff;
+ 	font-weight: 400;
+ }
+ .paragraph{
+ 	display: flex;
+ 	justify-content: center;
+}
+ .directions{
+ 	display: flex;
+ 	position: absolute;
+ 	right: 20px;
+ 	bottom: 30px;
+ 	color: #fff;
+ }
+ .left, .right{
+ 	width: 40px;
+ 	height: 40px;
+ 	background: var(--color_elements);
+ 	margin-left: 10px;
+ 	border-radius: 50px;
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ 	cursor: pointer;
+}
+ .icon-left, .icon-right{
+ 	font-size: 1.2em;
+}
+ .right{
+ 	background: var(--color_principal);
+}
+ .footer-icons{
+ 	display: flex;
+ 	justify-content: center;
+ 	margin-top: 6px;
+ 	color: #fff;
+}
+.icon-foot-1{
+	padding: 5px 10px;
+	background: var(--color_elements);
+	border-radius: 5px;
+	margin: 0 5px 0 5px;
+	cursor: pointer;
+}
+.icon-foot{
+	background: 5px;
+	padding: 0 10px;
+	background: var(--color_elements);
+	margin: 0 10px 0 10px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+.icon-heart{
+	color: var(--color_principal);
+}
+.paragraph{
+	color: var(--color_elements);
+}
+.span-2, .span-3{
+	margin: 0 10px;
+	font-size: 1em;
+	font-weight: bold;
+	position: relative;
+	bottom: 4px;
+}
